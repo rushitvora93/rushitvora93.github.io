@@ -1,0 +1,658 @@
+ <!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="We recording music">
+     <!-- title -->
+     <title>index</title>
+  
+   
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/css/datepicker.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">  
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <!-- css for slider -->
+    
+
+     <!--[if IE 9]>
+        <link rel="stylesheet" type="text/css" href="css/ie.css" />
+        <![endif]-->
+        <!--[if IE]>
+            <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+    
+</head>
+<body>
+ 
+
+
+    <!-- header -->
+
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <div id="datepicker" class="input-group date" data-date-format="mm-dd-yyyy">
+                        <input class="form-control" type="text" readonly placeholder="Today" />
+                        <span class="input-group-addon"><i class="caret"></i></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- left sidebar -->
+
+    <div id="left_menu" class="open"> 
+        <div class="left_arrow"><i class="fa fa-angle-right"></i></div>
+        <div class="input-group">
+            <input type="text" class="form-control search_bar" placeholder="Tasks" name="">
+            <a  class="input-group-addon"><i class="fa fa-search"></i></a>
+        </div> 
+        
+
+        <div class="first_tab">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home">2 Unassigned</a></li>
+              <li><a data-toggle="tab" href="#menu1">2 assigned</a></li>
+              <li><a data-toggle="tab" href="#menu2">2 completed</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home" class="tab-pane fade in active">
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/plus.png" alt="plus" width="31" class="img-responsive center-block">Assign<br> Field</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>7:00 pm - 8:00 pm <br> No Recepient<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned">unassigned</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                    <div class="retry">Unable to auto assign Retry <a href="#">Retry</a></div>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/plus.png" alt="plus" width="31" class="img-responsive center-block">Assign<br> Field</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>7:00 pm - 8:00 pm <br> No Recepient<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_onmap">show on map</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                    <div class="retry">Unable to auto assign Retry <a href="#">Retry</a></div>
+
+                </div>
+                <div id="menu1" class="tab-pane fade">
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_assign">assigned</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                    <hr>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_onmap">Intransit</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                     <hr>
+
+                     <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_arrived">arrived</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                    <hr>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_inprogress">inprogress</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                     <hr>
+                    
+                </div>
+                <div id="menu2" class="tab-pane fade">
+
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_success">assigned</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                    <hr>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_success">Intransit</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                     <hr>
+
+                     <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_fail">arrived</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                    <hr>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#"><img src="img/man2.png" alt="man" width="31" class="img-responsive center-block">Aliton<br> Bettard</a>
+                        </div>
+                        <div class="media-body">
+                            <h5>2:45 pm <br> Smith Sonia<br><span  data-toggle="tooltip" data-placement="bottom" title="Rua Marte - Jardim Tupanci , BA">Rua Marte - Jardim Tupanci , BA</span></h5>
+                            <button class="btn btn_unassigned btn_fail">inprogress</button>
+                        </div>
+                        <a href="#" class="go_in_detail"><i class="fa fa-angle-right"></i></a>
+                    </div>
+
+                     <hr>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="detailed_tab">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#Details">Details</a></li>
+                <li><a data-toggle="tab" href="#Customer">Customer</a></li>
+                <li><a data-toggle="tab" href="#History">History</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li><a href="#" data-toggle="modal" data-target="#myModal">Edit Ticket</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#schedule">Change schedule</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#Notes">Input notes</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#myModal1">Reassign field</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#Staus">changes status </a></li>
+                    </ul>
+                </li>
+            </ul>
+  
+            <div class="tab-content">
+                <div id="Details" class="tab-pane fade in active">
+
+                    <ul class="list-unstyled">
+                        <li>Status:<span>InProgress</span></li>
+                        <li>Schedule:<span>26/09/2017 09:00</span></li>
+                        <li>Category:<span>Computer Repair</span></li>
+                        <li>Service:<span>Virus Removal & Clean Up</span></li>
+                        <li>Field:<span>Harry Poter</span></li>
+                    </ul>
+
+                </div>
+
+                <div id="Customer" class="tab-pane fade">
+
+                    <ul class="list-unstyled">
+                        <li class="f15">Customer Details</li>
+                        <li>Name:<span>Susi Melven</span></li>
+                        <li>Phone:<span>1198484889</span></li>
+                        <li>Email:<span>susi.melve@uol.com</span></li>
+                        <li>Address:<span>Rua Constelacao, 786<br>Fortaleza - São Paulo</span></li>
+                        <li>Subscription:<span>ID2030 - Home Basic</span></li>
+                    </ul>
+
+                </div>
+
+                <div id="History" class="tab-pane fade">
+
+                    <ul class="list-unstyled">
+                        <li class="f15">Ticket History</li>
+                        <li>Status update from Assigned to Close Successful<span>08:32 26/09/2017</span></li>
+                        <li>Ticket Transfered to Field<span>08:32 26/09/2017</span></li>
+                        <li>Ticket Assigned to Field {ID-Field Name}<span>08:32 26/09/2017</span></li>
+                        <li>Status update from Assigned to inProgress<span>08:32 26/09/2017</span></li>
+                        <li>Customer Contact {Contact Log}<span>08:32 26/09/2017</span></li>
+                        <li>Assigned to Agent {ID-Agent Name}<span>08:32 26/09/2017</span></li>
+                        <li>Created By {USER}<span>08:32 26/09/2017</span></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- right sidebar -->
+
+    <div id="right_menu">
+        <div class="right_arrow"><i class="fa fa-angle-left"></i></div>
+        <div class="input-group">
+            <input type="text" class="form-control search_bar" placeholder="Tasks" name="">
+            <a  class="input-group-addon"><i class="fa fa-search"></i></a>
+        </div>
+        <div class="first_tab">
+            <ul class="nav nav-tabs">
+              <li class="active"><a data-toggle="tab" href="#home1">2 free</a></li>
+              <li><a data-toggle="tab" href="#menu11">2 busy</a></li>
+              <li><a data-toggle="tab" href="#menu22">2 online</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="home1" class="tab-pane fade in active">
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#">
+                                <img src="img/man2.png" alt="plus" width="31" class="img-responsive center-block">
+                                <span class="on"></span>
+                            </a>          
+                        </div>
+                        <div class="media-body">
+                            <h5><strong>Aliton Bettard</strong> <br> +5511945502254</h5>
+                            <a href="#" class="num_task"><span>3</span>Tasks</a>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#">
+                                <img src="img/man2.png" alt="plus" width="31" class="img-responsive center-block">
+                                <span class="on"></span>
+                            </a>  
+                        </div>
+                        <div class="media-body">
+                            <h5><strong>Aliton Bettard</strong> <br> +5511945502254</h5>
+                            <a href="#" class="num_task"><span>2</span>Tasks</a>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="media">
+                        <div class="pull-left">
+                            <a href="#">
+                                <img src="img/man2.png" alt="plus" width="31" class="img-responsive center-block">
+                                <span class="on"></span>
+                            </a>  
+                        </div>
+                        <div class="media-body">
+                            <h5><strong>Aliton Bettard</strong> <br> +5511945502254</h5>
+                            <a href="#" class="num_task"><span>5</span>Tasks</a>
+                        </div>
+                    </div>
+
+                    <hr>               
+                    
+                </div>
+            </div>
+        </div> 
+
+        <div class="detailed_tab">
+            <ul class="nav nav-tabs">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                        <li><a href="#"  data-toggle="modal" data-target="#myModal1">Reassign Field</a></li>
+                        <li><a href="#"  data-toggle="modal" data-target="#block">Block Field</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+             <ul class="list-unstyled details">
+                <li>Name<span>Hermione Granger</span></li>
+                <li>Contact<span>11945502254</span></li>
+                <li>Last location<span>Rua Werner Goldberg,<br>600 - Jardim Tupanci,<br>Barue</span></li>
+                <li>Rating<span>3,9</span></li>
+                <li>Device<span>iOS</span></li>
+                <li>Baterry<span>75%</span></li>
+                <li>Version<span>3.2.1</span></li>
+            </ul>
+
+            <h6 class="total_task">3 Tasks (1Task left )</h6>
+
+            <div class="media">
+                <div class="pull-left">
+                </div>
+                <div class="media-body">
+                    <h5>1:15 pm - 2:45 pm <br><span>Havy<br> Rua Marte - Jardim Tupanci,<br>
+                    Barueri - State of São Paulo,<br>
+                    Brazil</span></h5>
+                    <button class="btn btn_unassigned btn_arrived">assigned</button>
+                </div>
+            </div>
+            <a href="#" class="view_detail">View Detail in Task Pane</a>
+            <div class="media">
+                <div class="pull-left">
+                </div>
+                <div class="media-body">
+                    <h5>1:15 pm - 2:45 pm <br><span>Havy<br> Rua Marte - Jardim Tupanci,<br>
+                    Barueri - State of São Paulo,<br>
+                    Brazil</span></h5>
+                    <button class="btn btn_unassigned btn_assign">assigned</button>
+                </div>
+            </div>
+             <a href="#" class="view_detail">View Detail in Task Pane</a>
+        </div>
+    </div>
+
+    <div id="wrapper">
+
+        <!-- map -->
+
+        <section class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d118106.70010221665!2d73.17308625!3d22.32210265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1495174129879" width="100%" height="99%" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </section>
+
+    </div>
+
+
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>TICKET ID: 349300</h2>
+          </div>
+          <div class="modal-body">
+                <div class="radio">
+                    <input type="radio" id="option1" name="Assigning">
+                    <label for="option1">Auto Assigning</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="option2" name="Assigning">
+                    <label for="option2">Assign to a Field <span class="pull-right">30 Fields Online</span></label>
+                </div>
+
+                <div class="form-group">
+                    <label>Select a Field</label>
+                    <select class="form-control">
+                        <option>Harry Poter <span>InTransit - 0.5 km</span></option>
+                        <option>Hermione Granger <span>InProgress - 0.9 km</span></option>
+                        <option>Ron Wesley <span>Idle - 1.5 km</span></option>
+                    </select>
+                </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="schedule" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Change Ticket Schedule</h2>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Date:</label>
+                    <div id="datepicker1" class="input-group date" data-date-format="mm-dd-yyyy">
+
+                        <input class="form-control" type="text" readonly placeholder="Today" />
+                        <span class="input-group-addon"></span>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label>Time:</label>
+                        <select class="form-control">
+                            <option></option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+                
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="Notes" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Notes info Ticket: 349300</h2>
+          </div>
+          <div class="modal-body">
+            <div class="form-group">
+                <label>Notes</label>
+                <input type="text" class="form-control" name="">
+            </div>
+                
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="Staus" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Change Ticket Staus</h2>
+          </div>
+          <div class="modal-body">
+                <div class="form-group">
+                    <select class="form-control">
+                        <option>InProgress</option>
+                        <option>Successful</option>
+                        <option>Unsucessful</option>
+                        <option>InTransit</option>
+                    </select>
+                </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="myModal1" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Reassign Tickets</h2>
+          </div>
+          <div class="modal-body">
+                <p class="Reassign_txt">Reassign pending Tickets of: Hermione Granger</p>
+                <div class="radio">
+                    <input type="radio" id="option11" name="Assigning">
+                    <label for="option11">Auto Assigning</label>
+                </div>
+                <div class="radio">
+                    <input type="radio" id="option22" name="Assigning">
+                    <label for="option22">Assign to a Field <span class="pull-right">30 Fields Online</span></label>
+                </div>
+
+                <div class="form-group">
+                    <label>Select a Field</label>
+                    <select class="form-control">
+                        <option>Harry Poter <span>InTransit - 0.5 km</span></option>
+                        <option>Hermione Granger <span>InProgress - 0.9 km</span></option>
+                        <option>Ron Wesley <span>Idle - 1.5 km</span></option>
+                    </select>
+                </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Submit</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="block" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-body">
+                <h2>Do you really want block Field?</h2>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">BLOCK</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+<!-- javascript libraries -->
+<script src="js/jquery-1.11.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+<script type="text/javascript">
+    $(function () {
+      $("#datepicker").datepicker({ 
+            autoclose: true, 
+            todayHighlight: true
+      }).datepicker('update', new Date());
+    });
+
+    $(function () {
+      $("#datepicker1").datepicker({ 
+            autoclose: true, 
+            todayHighlight: true
+      }).datepicker('update', new Date());
+    });
+
+    $("#left_menu .left_arrow").click(function(e) {
+       e.preventDefault();
+        $(this).parents('#left_menu').toggleClass("open");
+        $(this).find('i').toggleClass("fa-angle-left fa-angle-right");
+    });
+
+    $("#right_menu .right_arrow").click(function(e) {
+       e.preventDefault();
+        $(this).parents('#right_menu').toggleClass("open");
+        $(this).find('i').toggleClass("fa-angle-left fa-angle-right");
+    });
+    $("#menu-toggle2").click(function(e) {
+        e.preventDefault();
+        $("body").toggleClass("right");
+    });
+
+    $('.map').css('height' , $(window).height());
+
+
+
+    $('.first_tab h5').click(function(){
+        $(this).parents('.first_tab').siblings('.detailed_tab').slideToggle();
+        $(this).parents('.first_tab').slideToggle();
+        $(this).parents().siblings('.input-group').find('input').val('Task / #3837');
+        $(this).parents().siblings('.input-group').find('i').toggleClass('fa-search fa-times');
+    });
+
+    $('.input-group-addon').click(function(){
+        $(this).parents('.input-group').siblings('.first_tab').slideToggle();
+        $(this).parents('.input-group').siblings('.detailed_tab').slideToggle();
+        $(this).find('i').toggleClass('fa-search fa-times');
+        $(this).siblings('input').val('');
+    });
+
+
+    $('#right_menu .detailed_tab .media').click(function(){
+            $(this).parents('#right_menu').siblings('#left_menu').addClass('open');
+            $(this).parents('#right_menu').siblings('#left_menu').find('.first_tab').slideToggle();
+            $(this).parents('#right_menu').siblings('#left_menu').find('.detailed_tab').slideToggle();
+    });
+
+
+    $("input[id='option2']").click(function(){
+            $(this).parents('.radio').siblings('.form-group').fadeIn();
+    });
+    $("input[id='option1']").click(function(){
+            $(this).parents('.radio').siblings('.form-group').fadeOut();
+    });
+    $("input[id='option22']").click(function(){
+            $(this).parents('.radio').siblings('.form-group').fadeIn();
+    });
+    $("input[id='option11']").click(function(){
+            $(this).parents('.radio').siblings('.form-group').fadeOut();
+    });
+
+</script>
+
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+</body>
+</html>
