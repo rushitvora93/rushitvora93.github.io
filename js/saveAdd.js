@@ -7,9 +7,23 @@ app.controller('MainCtrl', function($scope) {
     
   };
   
+ $scope.getBookingURL = function() {
+	if($scope.addrForm.streetNumber.$invalid) 
+		return "#";
+	else 
+		return "set_schedual.html";
+ }
  
+  $scope.getenterAddressURL = function() {
+	if($scope.addrForm.streetNumber.$invalid) 
+		return "#";
+	else 
+		return "set_schedual.html";
+ }
   
   $scope.saveAddress = function() {
+	if($scope.addrForm.streetNumber.$invalid) 
+		return false;
 	localStorage.setItem("address", $scope.streetNumber.name);
 	
   };
