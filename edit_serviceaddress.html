@@ -29,7 +29,7 @@
       <![endif]-->
       
   </head>
-  <body class="form_body" ng-app = "retriveAdd" ng-controller  = "MainCtrl">
+  <body class="form_body" ng-app = "retriveAdd" ng-controller  = "MainCtrl" ng-cloak>
 
   <header>
     <nav class="navbar navbar-default">
@@ -82,7 +82,11 @@
             <form>
               <h3>SERVICE ADDRESS <span><a href="enter_address.html" class="orange_link">Edit</a></span></h3>               
               <div class="form-group">
-                <label class="address-label">{{streetNumber.name}}</label>
+                <label class="address-label">{{streetNumber.name}}</label></br>
+				 <label class="address-label"><b>Apt/Suit: </b>{{streetNumber.appartment}}</label></br>
+				 <label class="address-label"><b>Phone number: </b>{{streetNumber.phone}}</label></br>
+				  <label class="address-label"><b>Instructions: </b></label></br>
+				   <label class="address-label">{{streetNumber.additional}}</label>
               </div>
               <div class="form-group">
                 <a href="#" class="btn btn_next trans" type="submit">UPDATE</a>

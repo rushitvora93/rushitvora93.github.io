@@ -37,7 +37,7 @@
       <![endif]-->
       
   </head>
-  <body class="form_body" ng-app = "myApp" ng-controller  = "MainCtrl">
+  <body class="form_body" ng-app = "myApp" ng-controller  = "MainCtrl" ng-cloak>
 
   <header>
     <nav class="navbar navbar-default">
@@ -95,43 +95,63 @@
                 <label>Address</label>
                 <input vs-google-autocomplete="{ types: ['address'] }"
                  vs-autocomplete-validator="vs-street-address"
-          
-                 ng-model="streetNumber.name"
-                 
+                 ng-model="streetNumber.formattedText"
+				 vs-place="streetNumber.place" 
+                 vs-place-id="streetNumber.components.placeId"
+                 vs-street-number="streetNumber.components.streetNumber" 
+                 vs-street="streetNumber.components.street"
+                 vs-city="streetNumber.components.city"
+                 vs-state="streetNumber.components.state"
+                 vs-country-short="streetNumber.components.countryCode"
+                 vs-country="streetNumber.components.country"
+                 vs-post-code="streetNumber.components.postCode"
+                 vs-district="streetNumber.components.district"
+                 vs-latitude="streetNumber.components.location.lat"
+                 vs-longitude="streetNumber.components.location.longi"
+                 ng-blur = "handleBlur()"
                  type="text" 
                  name="streetNumber"
                  id="streetNumber"
                  class="form-control" 
-                 placeholder="Enter full address (street number, street, ...)">
-          
+                 placeholder="Enter full address (street number, street, ...)" ng-required = "true" select-on-click>
+					
+				<!-- Rest of address -->
+				
+				
+				<span style = "float:left;">{{streetNumber.formattedTextOut}}</span>
+
 				  <!-- validation info -->
-				  <span style = "color:red;" ng-show = "addrForm.streetNumber.$invalid">Please enter address with Street Number</span>
+				  <span style = "color:red;float:right;" ng-show = "streetNumber.place != '' && addrForm.streetNumber.$invalid" >Type a Number</span>
+				    <span style = "color:red;float:right;" ng-show = "streetNumber.place == ''">Type a valid address</span>
               </div>
 
               <div class="form-group">
                 <label>Suit/Apt#</label>
-                <input type="text" class="form-control" name="">
+                <input type="text" class="form-control" name="" ng-model = "streetNumber.appartment" required>
+				<span style = "color:red;float:right;" ng-show = "streetNumber.appartment == ''">Type an apartment number</span>
               </div>
 
               <div class="form-group">
                 <label>Phone Number</label>
-                <input type="text" class="form-control" name="">
+                <input type="text" class="form-control" name="" ng-model = "streetNumber.phone" required>
+				<span style = "color:red;float:right;" ng-show = "streetNumber.phone == ''">Type a phone number</span>
               </div>
 
               <div class="form-group">
                 <div class="checkbox">
-                  <input type="checkbox" id="checkbox1" name="">
+                  <input type="checkbox" id="checkbox1" name="" ng-model = "streetNumber.smsField">
                   <label for="checkbox1">Text me when Field Arrive</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <label>Additional Instructions</label>
-                <textarea class="form-control" cols="12" rows="3"></textarea>
+                <textarea class="form-control" cols="12" rows="3" ng-disabled = "!streetNumber.smsField" ng-model = "streetNumber.additional"></textarea>
+				<span style = "color:red;float:right;" ng-show = "streetNumber.additional == ''&& streetNumber.smsField">Type additional instructions </span>
               </div>
 
               <div class="form-group">
-                <a ng-href="{{getBookingURL()}}" class="btn btn_next trans" type="submit"  ng-click = "saveAddress()">Next</a>
+                <a ng-href="{{getBookingURL()}}" style = "margin-top:20px;" class="btn btn_next trans" type="submit"  ng-click = "saveAddress()">Next</a>
               </div>
             </form>
           </div>
