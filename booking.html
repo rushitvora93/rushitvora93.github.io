@@ -94,7 +94,6 @@
               <div class="form-group">
                 <label>Address</label>
                 <input vs-google-autocomplete="{ types: ['address'] }"
-                 vs-autocomplete-validator="vs-street-address"
                  ng-model="streetNumber.formattedText"
 				 vs-place="streetNumber.place" 
                  vs-place-id="streetNumber.components.placeId"
@@ -121,7 +120,7 @@
 				<span style = "float:left;">{{streetNumber.formattedTextOut}}</span>
 
 				  <!-- validation info -->
-				  <span style = "color:red;float:right;" ng-show = "streetNumber.place != '' && addrForm.streetNumber.$invalid" >Type a Number</span>
+				  <span style = "color:red;float:right;" ng-show = "streetNumber.place != '' && streetNumber.components.streetNumber === undefined" >Type a Number</span>
 				    <span style = "color:red;float:right;" ng-show = "streetNumber.place == ''">Type a valid address</span>
               </div>
 

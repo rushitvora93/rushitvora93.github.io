@@ -111,6 +111,7 @@ app.controller('MainCtrl', function($scope, $location) {
 	
 	$scope.handleBlur = function() {
 		$scope.isBlur = true;
+		
 	}
   
   initialize();
