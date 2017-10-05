@@ -125,16 +125,16 @@
 				    <span style = "color:red;float:right;" ng-show = "streetNumber.place == ''">Type a valid address</span>
               </div>
 
-              <div class="form-group">
+              <div class="form-group" style = "margin-top:20px;">
                 <label>Suit/Apt#</label>
-                <input type="text" class="form-control" name="" ng-model = "streetNumber.appartment" required>
-				<span style = "color:red;float:right;" ng-show = "streetNumber.appartment == ''">Type an apartment number</span>
+                <input type="text" class="form-control" name="apartNum" ng-model = "streetNumber.appartment" required>
+				<span style = "color:red;float:right;" ng-show = "addrForm.apartNum.$invalid">Type an apartment number</span>
               </div>
 
               <div class="form-group">
                 <label>Phone Number</label>
-                <input type="text" class="form-control" name="" ng-model = "streetNumber.phone" required>
-				<span style = "color:red;float:right;" ng-show = "streetNumber.phone == ''">Type a phone number</span>
+                <input type="text" class="form-control" name="phoneNum" ng-model = "streetNumber.phone" required>
+				<span style = "color:red;float:right;" ng-show = "addrForm.phoneNum.$invalid">Type a phone number</span>
               </div>
 
               <div class="form-group">
@@ -146,8 +146,8 @@
 
               <div class="form-group">
                 <label>Additional Instructions</label>
-                <textarea class="form-control" cols="12" rows="3" ng-disabled = "!streetNumber.smsField" ng-model = "streetNumber.additional"></textarea>
-				<span style = "color:red;float:right;" ng-show = "streetNumber.additional == ''&& streetNumber.smsField">Type additional instructions </span>
+                <textarea class="form-control" cols="12" rows="3" name = "addInstr" ng-disabled = "!streetNumber.smsField" ng-model = "streetNumber.additional"></textarea>
+				<span style = "color:red;float:right;" ng-show = "addrForm.addInstr.$invalid && streetNumber.smsField">Type additional instructions </span>
               </div>
 
               <div class="form-group">
