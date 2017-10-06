@@ -15,7 +15,7 @@ app.directive('selectOnClick', ['$window', function ($window) {
     };
 }]);
 
-app.controller('MainCtrl', function($scope, $location) {
+app.controller('MainCtrl', function($scope, $location, $timeout) {
   
   function initialize() {
 	var url = $location.absUrl();
@@ -77,7 +77,8 @@ app.controller('MainCtrl', function($scope, $location) {
 	
   };
    $scope.$watch('streetNumber.place', function() {
-		if($scope.streetNumber.place != '') {
+    $timeout(function () {
+        if($scope.streetNumber.place != '') {
         for(var i=0;i<$scope.streetNumber.place.address_components.length;i++) {
 			for(var j=0;j<$scope.streetNumber.place.address_components[i].types.length;j++) {
 				if($scope.streetNumber.place.address_components[i].types[j] == "route") {
@@ -96,9 +97,12 @@ app.controller('MainCtrl', function($scope, $location) {
 		$scope.streetNumber.formattedTextOut = $scope.streetNumber.components.subLocal+", "+$scope.streetNumber.components.district+" - "+$scope.streetNumber.components.state;	
 		
 		}
+    }, 100);
+		
     });
 	$scope.isBlur = false;
 	   $scope.$watch('streetNumber.formattedText', function() {
+	    $timeout(function () {
 		if($scope.streetNumber.place != '' && $scope.isBlur) {
 		if($scope.streetNumber.components.streetNumber === undefined)
 			$scope.streetNumber.formattedText = $scope.streetNumber.components.route +", "+ 'number';
@@ -106,6 +110,7 @@ app.controller('MainCtrl', function($scope, $location) {
 			$scope.streetNumber.formattedText = $scope.streetNumber.components.route +", "+ $scope.streetNumber.components.streetNumber;
 		}
 		$scope.isBlur = false;
+		 }, 20);
 		
     });
 	
