@@ -97,7 +97,7 @@ app.controller('MainCtrl', function($scope, $location, $timeout) {
 		$scope.streetNumber.formattedTextOut = $scope.streetNumber.components.subLocal+", "+$scope.streetNumber.components.district+" - "+$scope.streetNumber.components.state;	
 		
 		}
-    }, 100);
+    }, 200);
 		
     });
 	$scope.isBlur = false;
