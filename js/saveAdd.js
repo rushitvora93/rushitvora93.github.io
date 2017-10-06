@@ -110,7 +110,7 @@ app.controller('MainCtrl', function($scope, $location, $timeout) {
 			$scope.streetNumber.formattedText = $scope.streetNumber.components.route +", "+ $scope.streetNumber.components.streetNumber;
 		}
 		$scope.isBlur = false;
-		 }, 200);
+		 }, 400);
 		
     });
 	
