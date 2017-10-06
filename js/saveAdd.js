@@ -6,7 +6,10 @@ app.directive('selectOnClick', ['$window', function ($window) {
            scope.$watch('streetNumber.formattedText', function(newValue) {
 			if (!$window.getSelection().toString() && element[0].value.indexOf("number") !== -1) {
                     // Required for mobile Safari
+					$timeout(function () {
                     element[0].setSelectionRange(element[0].value.length-7, element[0].value.length)
+					 }, 500);
+					
                 }
   });
                 
