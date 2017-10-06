@@ -97,7 +97,7 @@ app.controller('MainCtrl', function($scope, $location, $timeout) {
 		$scope.streetNumber.formattedTextOut = $scope.streetNumber.components.subLocal+", "+$scope.streetNumber.components.district+" - "+$scope.streetNumber.components.state;	
 		
 		}
-    }, 200);
+    }, 20);
 		
     });
 	$scope.isBlur = false;
@@ -110,7 +110,7 @@ app.controller('MainCtrl', function($scope, $location, $timeout) {
 			$scope.streetNumber.formattedText = $scope.streetNumber.components.route +", "+ $scope.streetNumber.components.streetNumber;
 		}
 		$scope.isBlur = false;
-		 }, 20);
+		 }, 200);
 		
     });
 	
